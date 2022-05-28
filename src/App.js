@@ -15,6 +15,7 @@ import Result from "./pages/Result";
 //Css
 import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -25,17 +26,10 @@ const App = () => {
           <Route exact path="/login" element={<Login authorized={false} />} />
           <Route exact path="/exam" element={<Exam authorized={false} />} />
           <Route exact path="/result" element={<Result />} />
-          <Route
-            path="*"
-            element={
-              <div>
-                <h2>404 Page not found etc</h2>
-              </div>
-            }
-          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </>
   );
 };

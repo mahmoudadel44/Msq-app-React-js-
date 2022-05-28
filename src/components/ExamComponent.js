@@ -10,10 +10,8 @@ const ExamComponent = () => {
     (state) => state?.ExamData?.currentQuestionIndex
   );
   return (
-    <div className="exam">
-      <div className="score">
-        Question {currentQuestionIndex + 1} / {Questions.length}
-      </div>
+    <div className="questionsNumber">
+      Question {currentQuestionIndex + 1} / {Questions.length}
     </div>
   );
 };

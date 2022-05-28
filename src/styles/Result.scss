@@ -1,18 +1,29 @@
+@import "../settings/colors";
+
 .results {
-  background-color: #fff;
-  height: 300px;
+  background-color: $white-color;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 4px;
+  min-width: 450px;
 }
 
 .congratulations {
-  background-color: #0094da;
+  background-color: $main-bg;
   padding: 20px;
   font-size: 36px;
-  color: #fff;
+  color: $white-color;
+  border-radius: 4px;
 }
 
-.results-info {
+.resultsInfo {
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 18px;
+  color: $main-bg;
+  font-weight: bold;
 }

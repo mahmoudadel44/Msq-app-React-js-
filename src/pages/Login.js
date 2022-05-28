@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { toast } from "react-toastify";
 import { ALLOWED_LOGIN } from "../redux/types/types";
 
 //Css
@@ -16,9 +17,10 @@ const Login = () => {
   const onSumit = () => {
     setShowSpinner(true);
     dispatch({ type: ALLOWED_LOGIN });
+    toast.success("loggedin successfully");
     setTimeout(() => {
       nav("/exam");
-    }, 1000);
+    }, 2000);
   };
 
   return (

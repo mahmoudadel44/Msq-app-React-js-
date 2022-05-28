@@ -1,12 +1,28 @@
-.next-button {
-  margin: 0 auto;
-  color: #fff;
-  background: #0b0e21;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 14px 75px;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-align: center;
+@import "../settings/colors";
+
+.Exam {
+  background: $main-bg;
+  padding-top: 75px;
+  h1 {
+    font-family: "Carattere", cursive;
+    font-size: 60px;
+    color: $white-color;
+  }
+  .nextBtn {
+    text-align: center;
+    font-weight: bold;
+    width: 258px;
+    height: 50px;
+    background: $white-color;
+    margin: 35px auto 20px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $main-bg;
+  }
 }

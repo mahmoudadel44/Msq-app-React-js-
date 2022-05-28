@@ -1,22 +1,20 @@
+@import "../settings/colors";
+
 .login {
-  background: #3f4079;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 75px;
   h1 {
     font-family: "Carattere", cursive;
     font-size: 60px;
-    color: #fff;
+    color: $white-color;
   }
   form {
-    background: #fff;
+    background: $white-color;
     border-radius: 10px;
     padding: 30px;
     width: 50%;
     box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 30%);
     .requiredMark {
-      color: red;
+      color: $red-color;
     }
   }
   input {
@@ -26,8 +24,8 @@
   }
   .loginBtn {
     border: none;
-    color: #fff;
-    background: #e74e84;
+    color: $white-color;
+    background: $lightred-color;
     width: 120px;
     height: 35px;
     display: inline-block;
@@ -40,7 +38,7 @@
     display: flex;
     align-items: center;
     &:hover {
-      background: #69bdb4;
+      background: $lightgreen-color;
       transition: 0.5s all ease-in-out;
     }
     .loading {

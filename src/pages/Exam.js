@@ -22,6 +22,7 @@ const Exam = () => {
       {isLoggedin ? (
         <div div className="Exam">
           <div className="container">
+            <h1 className="text-center">Take Your Quiz</h1>
             {displayResult ? (
               <Result />
             ) : (
@@ -30,7 +31,7 @@ const Exam = () => {
                 <QuestionComponent />
                 <AnswersComponent />
                 <div
-                  className="next-button"
+                  className="nextBtn"
                   onClick={() => dispatch({ type: NEXT_QUESTION })}
                 >
                   Next Question

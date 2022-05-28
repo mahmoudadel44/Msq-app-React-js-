@@ -10,11 +10,7 @@ const QuestionComponent = () => {
     (state) => state?.ExamData?.currentQuestionIndex
   );
   const currentQuestion = Questions[currentQuestionIndex];
-  return (
-    <div>
-      <div className="question">{currentQuestion.question}</div>
-    </div>
-  );
+  return <div className="question">{currentQuestion.question}</div>;
 };
 
 export default QuestionComponent;
