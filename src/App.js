@@ -22,8 +22,8 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" element={<Navigate replace to="/exam" />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/exam" element={<Exam />} />
+          <Route exact path="/login" element={<Login authorized={false} />} />
+          <Route exact path="/exam" element={<Exam authorized={false} />} />
           <Route exact path="/result" element={<Result />} />
           <Route
             path="*"
