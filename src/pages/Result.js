@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 //Css
 import "../styles/Result.scss";
@@ -9,18 +10,25 @@ const Result = () => {
     (state) => state?.ExamData?.correctAnswersCounter
   );
   const Questions = useSelector((state) => state?.ExamData?.questions);
+  const isLoggedin = useSelector((state) => state?.ExamData?.isLoggedin);
 
   return (
-    <div className="results mt-5 w-50 m-auto">
-      <div className="congratulations mt-5">Congratulations!</div>
-      <div className="results-info">
-        <div>You have completed the quiz.</div>
-        <div>
-          You've got {correctAnswersCounter} of &nbsp;
-          {Questions.length} right.
+    <>
+      {isLoggedin ? (
+        <div className="results mt-5 w-50 m-auto">
+          <div className="congratulations mt-5">Congratulations!</div>
+          <div className="results-info">
+            <div>You have completed the quiz.</div>
+            <div>
+              You've got &nbsp;
+              {Math.floor((correctAnswersCounter / Questions.length) * 100)} %
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      ) : (
+        <Navigate replace to="/login" />
+      )}
+    </>
   );
 };
 

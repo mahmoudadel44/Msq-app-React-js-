@@ -1,0 +1,14 @@
+.answers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+////////////////////////////media query///////////////
+@media (max-width: 992px) {
+  .answers {
+    justify-content: center;
+  }
+}

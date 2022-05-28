@@ -1,19 +1,24 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { Formik } from "formik";
-import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { ALLOWED_LOGIN } from "../redux/types/types";
+
 //Css
 import "../styles/Login.scss";
 
 const Login = () => {
   const [showSpinner, setShowSpinner] = useState(false);
+  const dispatch = useDispatch();
   const nav = useNavigate();
 
-  const onSumit = (values) => {
+  const onSumit = () => {
     setShowSpinner(true);
+    dispatch({ type: ALLOWED_LOGIN });
     setTimeout(() => {
       nav("/exam");
-    }, 2000);
+    }, 1000);
   };
 
   return (
@@ -22,7 +27,7 @@ const Login = () => {
         <div className="container">
           <h1 className="text-center">Login Form</h1>
           <form className="m-auto mt-4">
-            <div className="box_form clearfix">
+            <div>
               <Formik
                 initialValues={{ name: "", email: "", password: "" }}
                 onSubmit={onSumit}
@@ -44,8 +49,8 @@ const Login = () => {
                 }) => (
                   <div>
                     <div className="form-group">
-                      <label for="exampleInputName">
-                        Name <span>*</span>
+                      <label htmlFor="name">
+                        Name <span className="requiredMark">*</span>
                       </label>
                       <input
                         onBlur={handleBlur}
@@ -60,8 +65,8 @@ const Login = () => {
                     </div>
 
                     <div className="form-group mt-3">
-                      <label for="exampleInputEmail1">
-                        Email address <span>*</span>
+                      <label htmlFor="email">
+                        Email address <span className="requiredMark">*</span>
                       </label>
                       <input
                         onBlur={handleBlur}
@@ -76,8 +81,8 @@ const Login = () => {
                     </div>
 
                     <div className="form-group mt-3">
-                      <label for="exampleInputEmail1">
-                        Password <span>*</span>
+                      <label htmlFor="password">
+                        Password <span className="requiredMark">*</span>
                       </label>
                       <input
                         onBlur={handleBlur}

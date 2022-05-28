@@ -1,1 +1,3 @@
 export const NEXT_QUESTION = "NEXT_QUESTION";
+export const SELECT_ANSWER = "SELECT_ANSWER";
+export const ALLOWED_LOGIN = "ALLOWED_LOGIN";

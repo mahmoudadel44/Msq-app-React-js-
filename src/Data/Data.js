@@ -52,15 +52,15 @@ const data = [
     incorrectAnswers: ["color", "bgcolor", "bgColor"],
     correctAnswer: "background-color",
   },
-  {
-    question: "How do you add a background color for all <h1> elements?",
-    incorrectAnswers: [
-      "all.h1 {background-color:#FFFFFF;}",
-      "h1.setAll {background-color:#FFFFFF;}",
-      "h1.all {background-color:#FFFFFF;}",
-    ],
-    correctAnswer: "h1 {background-color:#FFFFFF;}",
-  },
+  // {
+  //   question: "How do you add a background color for all <h1> elements?",
+  //   incorrectAnswers: [
+  //     "all.h1 {background-color:#FFFFFF;}",
+  //     "h1.setAll {background-color:#FFFFFF;}",
+  //     "h1.all {background-color:#FFFFFF;}",
+  //   ],
+  //   correctAnswer: "h1 {background-color:#FFFFFF;}",
+  // },
 ];
 
 export default data;
