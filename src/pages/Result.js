@@ -17,11 +17,11 @@ const Result = () => {
       {isLoggedin ? (
         <div className="results mt-5 w-50 m-auto">
           <div className="congratulations mt-5">Congratulations!</div>
-          <div className="results-info">
+          <div className="resultsInfo">
             <div>You have completed the quiz.</div>
             <div>
-              You've got &nbsp;
-              {Math.floor((correctAnswersCounter / Questions.length) * 100)} %
+              You're Degree : &nbsp;
+              {Math.floor((correctAnswersCounter / Questions.length) * 100)}%
             </div>
           </div>
         </div>
