@@ -16,7 +16,7 @@ const Exam = () => {
   const dispatch = useDispatch();
   const displayResult = useSelector((state) => state?.ExamData?.displayResult);
   const isLoggedin = useSelector((state) => state?.ExamData?.isLoggedin);
-
+  const currentAnswer = useSelector((state) => state?.ExamData?.currentAnswer);
   return (
     <>
       {isLoggedin ? (
@@ -30,12 +30,17 @@ const Exam = () => {
                 <ExamComponent />
                 <QuestionComponent />
                 <AnswersComponent />
-                <div
-                  className="nextBtn"
+
+                <button
+                  className={`${
+                    currentAnswer
+                      ? "nextBtn border-0"
+                      : "nextBtn border-0 disabledBtn"
+                  }`}
                   onClick={() => dispatch({ type: NEXT_QUESTION })}
                 >
                   Next Question
-                </div>
+                </button>
               </>
             )}
           </div>

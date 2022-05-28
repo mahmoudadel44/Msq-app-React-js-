@@ -10,20 +10,21 @@
   margin: auto;
   border-radius: 4px;
   min-width: 450px;
-}
-
-.congratulations {
-  background-color: $main-bg;
-  padding: 20px;
-  font-size: 36px;
-  color: $white-color;
-  border-radius: 4px;
-}
-
-.resultsInfo {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 18px;
-  color: $main-bg;
-  font-weight: bold;
+  .congratulations {
+    background-color: $main-bg;
+    padding: 20px;
+    font-size: 36px;
+    color: $white-color;
+    border-radius: 4px;
+    .failedText {
+      font-size: 15px;
+    }
+  }
+  .resultsInfo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: $main-bg;
+    font-weight: bold;
+  }
 }

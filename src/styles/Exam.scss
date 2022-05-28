@@ -26,3 +26,6 @@
     color: $main-bg;
   }
 }
+.disabledBtn {
+  pointer-events: none !important;
+}
